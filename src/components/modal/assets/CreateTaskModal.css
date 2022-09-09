@@ -1,0 +1,11 @@
+.create-modal {
+    position: relative;
+    width: 420px;
+    height: 311px;
+
+    background: #FFFFFF;
+    /* Modal */
+
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}

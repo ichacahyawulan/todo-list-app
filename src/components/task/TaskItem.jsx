@@ -1,6 +1,5 @@
 import React from 'react';
 import { TbDots } from 'react-icons/tb';
-// import ProgressBar from 'react-bootstrap/ProgressBar';
 
 import './assets/TaskItem.css'
 

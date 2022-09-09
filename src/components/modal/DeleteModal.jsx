@@ -2,7 +2,7 @@ import React from 'react';
 
 import './assets/DeleteModal.css'
 
-export default function TaskItem(props) {
+export default function DeleteModal(props) {
     return (
         <div className='delete-modal'>
             
