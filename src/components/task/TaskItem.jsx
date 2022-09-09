@@ -25,10 +25,6 @@ export default function TaskItem(props) {
                     <TbDots size={24}></TbDots>
                 </div>
             </div>
-            
-            {/* <div className='progress'>
-                <ProgressBar now={60} />
-            </div> */}
         </div>
     );
 }

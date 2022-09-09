@@ -1,9 +1,8 @@
 import React from 'react';
 import TaskCard from './TaskCard';
-import { COLOR } from '../values/colors';
+import { COLOR } from '../../values/colors';
 
 import './assets/TaskContainer.css'
-import { NavItem } from 'react-bootstrap';
 
 export default function TaskContainer() {
     const colors = [COLOR.primary, COLOR.secondary, COLOR.danger, COLOR.succes]

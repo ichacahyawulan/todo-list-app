@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { TiPlus } from 'react-icons/ti';
-import TaskContainer from './TaskContainer';
+import TaskContainer from './task/TaskContainer';
 
 import './assets/MainPage.css'
 
