@@ -6,7 +6,7 @@
     padding: 16px;
     gap: 8px;
     width: 326px;
-    height: 372px;
+    height: auto;
     border: 1px solid;
     border-radius: 4px;
     flex: none;
@@ -29,7 +29,7 @@
     flex-grow: 0;
 }
 
-.label .text {
+.label > .text {
     width: 72px;
     height: 20px;
     font-style: normal;
@@ -48,6 +48,40 @@
     font-size: 12px;
     line-height: 20px;
     color: #404040;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.new-task {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 5px;
+    width: 78px;
+    height: 20px;
+    flex: none;
+    order: 3;
+    flex-grow: 0;
+}
+
+.new-task > .icon {
+    width: 20px;
+    height: 20px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.new-task > .text {
+    width: 53px;
+    height: 20px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    color: #1D1F20;
     flex: none;
     order: 1;
     flex-grow: 0;

@@ -8,7 +8,7 @@ export default function MainPage() {
 
     return (
         <div id='main-page'>
-            <div className="header">
+            <div className='header'>
                 <div className='menu'>
                     <div className='right-side'>
                         <div className='heading'>

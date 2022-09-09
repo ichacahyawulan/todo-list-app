@@ -1,0 +1,131 @@
+.task-item {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+    gap: 8px;
+    width: 100%;
+    height: 120px;
+    background: #FAFAFA;
+    border: 1px solid #E0E0E0;
+    border-radius: 4px;
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+}
+
+.task-item > .name {
+    width: 100%;
+    height: 48px;
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    color: #404040;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.task-item > hr {
+    width: 100%;
+    height: 0px;
+    margin: 0px;
+    border: 0px;
+    border-bottom: 1px dashed #E0E0E0;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.progress {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 26px;
+
+    width: 100%;
+    height: 24px;
+    flex: none;
+    order: 2;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.progress > .progress-count {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 12px;
+    width: auto;
+    height: 16px;
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+
+.progress > .progress-count > .progress-bar {
+    width: auto;
+    height: 16px;
+    border-radius: 9999px;
+    background: #EDEDED;
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+
+.progress > .progress-count > .progress-bar > .progress-color {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+    width: 30%;
+    height: 16px;
+    background: #01959F;
+    border-top-left-radius: 9999px;
+    border-bottom-left-radius: 9999px;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.progress > .progress-count > .progress-percent {
+    width: 25px;
+    height: 16px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #757575;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.progress > .setting {
+    width: 24px;
+    height: 24px;
+    color: #757575;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    
+}
+
+.progress > .setting :hover{
+    position: absolute;
+    width: 24px;
+    height: 24px;
+
+    background: #EDEDED;
+    border-radius: 4px;
+}
+
+
+

@@ -110,12 +110,13 @@
     flex-grow: 0;
 }
 
-hr {
+#main-page > hr {
     /* Line divider */
     position: absolute;
     height: 0px;
     left: 0px;
     right: 0px;
     top: 64px;
-    border: 1px solid #E0E0E0;
+    border: 0px;
+    border-bottom: 1px solid #E0E0E0;
 }
