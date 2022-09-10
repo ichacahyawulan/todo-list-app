@@ -1,6 +1,6 @@
 import React from 'react';
 import TaskCard from './TaskCard';
-import { COLOR } from '../../values/colors';
+import { COLOR } from '../../constant/colors';
 
 import './assets/TaskContainer.css'
 
