@@ -1,4 +1,4 @@
-.create-modal {
+.add-new-modal {
     position: relative;
     width: 420px;
     height: 311px;
@@ -144,7 +144,7 @@
     flex-grow: 1;
 }
 
-.body > .form > .name > .input-field-name > #input-name {
+.body > .form > .name > .input-field-name > #input-group-name {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -182,7 +182,7 @@
 }
 
 
-.body > .form > .progress {
+.body > .form > .desc {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -197,7 +197,7 @@
     flex-grow: 0;
 }
 
-.body > .form > .progress > .title {
+.body > .form > .desc > .title {
     width: 71px;
     height: 25px;
 
@@ -217,7 +217,7 @@
     flex-grow: 0;
 }
 
-.body > .form > .progress > .input-field-progress {
+.body > .form > .desc > .input-field-desc {
     box-sizing: border-box;
 
     display: flex;
@@ -227,7 +227,7 @@
     padding: 8px 16px;
     gap: 10px;
 
-    width: 143px;
+    width: 372px;
     height: 36px;
 
     background: #FFFFFF;
@@ -239,14 +239,14 @@
     flex-grow: 1;
 }
 
-.body > .form > .progress > .input-field-progress > #input-progress {
+.body > .form > .desc > .input-field-desc > #input-desc {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     padding: 0px;
     gap: 10px;
 
-    width: 111px;
+    width: 340px;
     height: 20px;
     border: 0px;
 
@@ -345,7 +345,7 @@ input[type="text"] {
     padding: 4px 16px;
     gap: 4px;
 
-    width: 97px;
+    width: auto;
     height: 32px;
 
     background: #01959F;
@@ -360,7 +360,7 @@ input[type="text"] {
 }
 
 .foot > .save > .text {
-    width: 65px;
+    width: auto;
     height: 24px;
 
     font-family: 'Nunito Sans';

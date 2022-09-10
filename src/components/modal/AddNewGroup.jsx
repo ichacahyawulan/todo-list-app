@@ -1,14 +1,14 @@
 import React from 'react';
 import { IoClose } from 'react-icons/io5'
 
-import './assets/CreateTaskModal.css'
+import './assets/AddNewGroup.css'
 
-export default function CreateTaskModal(props) {
+export default function AddNewGroup(props) {
     return (
-        <div className='create-modal'>
+        <div className='add-new-modal'>
             <div className='head'>
                 <div className='title'>
-                    Create Task
+                    Add New Group
                 </div>
                 <div className='close'>
                     <IoClose size={24}></IoClose>
@@ -17,15 +17,15 @@ export default function CreateTaskModal(props) {
             <div className='body'>
                 <div className='form'>
                     <div className='name'>
-                        <div className='title'>Task Name</div>
+                        <div className='title'>Group Name</div>
                         <div className='input-field-name'>
-                            <input id='input-name' placeholder='Type your Task' type ="text"></input>
+                            <input id='input-group-name' placeholder='Type your Group Name' type ="text"></input>
                         </div>
                     </div>
-                    <div className='progress'>
-                        <div className='title'>Progress</div>
-                        <div className='input-field-progress'>
-                            <input id='input-progress' placeholder='70%' type ="text"></input>
+                    <div className='desc'>
+                        <div className='title'>Description</div>
+                        <div className='input-field-desc'>
+                            <input id='input-desc' placeholder='Type your Description' type ="text"></input>
                         </div>
                     </div>
                 </div>
@@ -35,7 +35,7 @@ export default function CreateTaskModal(props) {
                     <div className='text'>Cancel</div>
                 </button>
                 <button className='save'>
-                    <div className='text'>Save Task</div>
+                    <div className='text'>Save Group</div>
                 </button>
             </div>
         </div>
