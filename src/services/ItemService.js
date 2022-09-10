@@ -2,23 +2,15 @@ import http from "./http-common";
 import auth from "./authService";
 
 class ItemService {
-    getListTodo(){
-        return http.get("/todos", {headers: auth()});
-    }
-    
-    createTodo(){
-        return http.post("/todos", data, {headers: auth()});
-    }
-
     getTodoItem(id){
         return http.get(`/todos/${id}/items`, {headers: auth()});
     }
 
-    createTodoItem(id){
+    createTodoItem(id, data){
         return http.post(`/todos/${id}/items`, data, {headers: auth()});
     }
 
-    updateTodoItem(id_todo, id_item){
+    updateTodoItem(id_todo, id_item, data){
         return http.patch(`/todos/${id_todo}/items/${id_item}`, data, {headers: auth()});
     }
 

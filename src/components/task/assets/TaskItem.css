@@ -6,7 +6,7 @@
     padding: 16px;
     gap: 8px;
     width: 100%;
-    height: 120px;
+    height: auto;
     background: #FAFAFA;
     border: 1px solid #E0E0E0;
     border-radius: 4px;
@@ -17,7 +17,7 @@
 
 .task-item > .name {
     width: 100%;
-    height: 48px;
+    height: auto;
     font-family: 'Nunito Sans';
     font-style: normal;
     font-weight: 700;
@@ -84,11 +84,25 @@
     align-items: center;
     padding: 0px;
     gap: 10px;
-    width: 30%;
     height: 16px;
     background: #01959F;
     border-top-left-radius: 9999px;
     border-bottom-left-radius: 9999px;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.progress > .progress-count > .progress-bar > .progress-color-done {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+    height: 16px;
+    background: #43936C;
+    border-radius: 9999px;
     flex: none;
     order: 0;
     align-self: stretch;
@@ -103,6 +117,15 @@
     font-size: 12px;
     line-height: 16px;
     color: #757575;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.progress > .progress-count > .progress-percent-done {
+    width: 16px;
+    height: 16px;
+
     flex: none;
     order: 1;
     flex-grow: 0;

@@ -6,7 +6,7 @@ class TodoService {
         return http.get("/todos", {headers: auth()});
     }
     
-    createTodo(){
+    createTodo(data){
         return http.post("/todos", data, {headers: auth()});
     }
 }
