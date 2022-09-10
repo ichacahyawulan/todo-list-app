@@ -1,0 +1,380 @@
+.login-page {
+    position: absolute;
+    width: 420px;
+    height: 338px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+
+    background: #FFFFFF;
+
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 24px;
+    gap: 8px;
+
+    position: absolute;
+    height: auto;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+
+    background: #FFFFFF;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.head > .title {
+    width: 372px;
+    height: 28px;
+
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+
+    align-items: center;
+    text-align: center;
+
+    color: #1D1F20;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 24px;
+    gap: 16px;
+
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 76px;
+    bottom: 108px;
+}
+
+.body > .form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+
+    width: 372px;
+    height: 154px;
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.body > .form > .email {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+
+    width: 372px;
+    height: 69px;
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.body > .form > .email > .title {
+    width: 71px;
+    height: 25px;
+
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 20px;
+
+    display: flex;
+    align-items: center;
+
+    color: #404040;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.body > .form > .email > .input-field-email {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    gap: 10px;
+
+    width: 372px;
+    height: 36px;
+
+    background: #FFFFFF;
+    border: 2px solid #EDEDED;
+    border-radius: 8px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+
+.body > .form > .email > .input-field-email > #input-login-email {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 10px;
+
+    width: 340px;
+    height: 20px;
+
+    border: 0px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+
+::placeholder {
+    width: auto;
+    height: 20px;
+
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+
+    display: flex;
+    align-items: center;
+    color: #404040;
+    opacity: 0.5;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+
+.body > .form > .pass {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+
+    width: 143px;
+    height: 69px;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.body > .form > .pass > .title {
+    width: 71px;
+    height: 25px;
+
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 20px;
+
+    display: flex;
+    align-items: center;
+
+    color: #404040;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.body > .form > .pass > .input-field-pass {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    gap: 10px;
+
+    width: 372px;
+    height: 36px;
+
+    background: #FFFFFF;
+    border: 2px solid #EDEDED;
+    border-radius: 8px;
+
+    flex: none;
+    order: 1;
+    flex-grow: 1;
+}
+
+.body > .form > .pass > .input-field-pass > #input-login-pass {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 10px;
+
+    width: 340px;
+    height: 20px;
+    border: 0px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+
+*:focus {
+    outline: none;
+}
+
+input[type="text"] {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+
+    display: flex;
+    align-items: center;
+    color: #404040;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.foot {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 24px;
+
+    position: absolute;
+    height: 60px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+
+    background: #FFFFFF;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.foot > .login-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 16px;
+    gap: 4px;
+
+    width: 76px;
+    height: auto;
+
+    background: #01959F;
+
+    border: 0px;
+
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.foot > .login-button > .text {
+    width: 37px;
+    height: 24px;
+
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.foot > .create-acc {
+    position: absolute;
+    width: 216px;
+    height: 25px;
+    left: 102px;
+    top: 64px;
+
+    display: flex;
+    align-items: center;
+
+    color: #404040;
+}
+
+.foot > .create-acc > .text {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+
+    display: flex;
+    align-items: center;
+    color: #404040;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.foot > .create-acc > .text button{
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    color: #01959F;
+
+    display: flex;
+    align-items: center;
+
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
