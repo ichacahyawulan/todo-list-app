@@ -1,3 +1,7 @@
+#container-login {
+    width: 100%;
+}
+
 .login-page {
     position: absolute;
     width: 420px;
@@ -14,7 +18,7 @@
     border-radius: 10px;
 }
 
-.head {
+.login-page .head {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -31,7 +35,7 @@
     border-radius: 10px 10px 0px 0px;
 }
 
-.head > .title {
+.login-page .head > .title {
     width: 372px;
     height: 28px;
 
@@ -47,7 +51,7 @@
     color: #1D1F20;
 }
 
-.body {
+.login-page .body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -61,7 +65,7 @@
     bottom: 108px;
 }
 
-.body > .form {
+.login-page .body > .form {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -77,7 +81,7 @@
     flex-grow: 0;
 }
 
-.body > .form > .email {
+.login-page .body > .form > .email {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -93,7 +97,7 @@
     flex-grow: 0;
 }
 
-.body > .form > .email > .title {
+.login-page .body > .form > .email > .title {
     width: 71px;
     height: 25px;
 
@@ -113,7 +117,7 @@
     flex-grow: 0;
 }
 
-.body > .form > .email > .input-field-email {
+.login-page .body > .form > .email > .input-field-email {
     box-sizing: border-box;
 
     display: flex;
@@ -173,7 +177,7 @@
 }
 
 
-.body > .form > .pass {
+.login-page .body > .form > .pass {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -188,7 +192,7 @@
     flex-grow: 0;
 }
 
-.body > .form > .pass > .title {
+.login-page .body > .form > .pass > .title {
     width: 71px;
     height: 25px;
 
@@ -208,7 +212,7 @@
     flex-grow: 0;
 }
 
-.body > .form > .pass > .input-field-pass {
+.login-page .body > .form > .pass > .input-field-pass {
     box-sizing: border-box;
 
     display: flex;
@@ -266,7 +270,7 @@ input[type="text"] {
     flex-grow: 0;
 }
 
-.foot {
+.login-page .foot {
     display: flex;
     flex-direction: row;
     justify-content: center;

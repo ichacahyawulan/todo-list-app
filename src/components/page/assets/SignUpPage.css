@@ -1,3 +1,7 @@
+#container-signup {
+    width: 100%;
+}
+
 .signup-page {
     position: absolute;
     width: 420px;
@@ -14,7 +18,7 @@
     border-radius: 10px;
 }
 
-.head {
+.signup-page .head {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -31,7 +35,7 @@
     border-radius: 10px 10px 0px 0px;
 }
 
-.head > .title {
+.signup-page .head > .title {
     width: 372px;
     height: 28px;
 
@@ -47,7 +51,7 @@
     color: #1D1F20;
 }
 
-.body {
+.signup-page .body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -61,7 +65,7 @@
     /* bottom: 108px; */
 }
 
-.body > .form {
+.signup-page .body > .form {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -77,7 +81,7 @@
     flex-grow: 0;
 }
 
-.body > .form .title {
+.signup-page .body > .form .title {
     width: auto;
     height: 25px;
 
@@ -98,8 +102,8 @@
 }
 
 .body > .form > .name,
-.body > .form > .email, 
-.body > .form > .pass, 
+.signup-page .body > .form > .email, 
+.signup-page .body > .form > .pass, 
 .body > .form > .pass-confirm {
     display: flex;
     flex-direction: column;
@@ -117,7 +121,7 @@
 }
 
 .body > .form > .name > .input-field-name,
-.body > .form > .email > .input-field-email {
+.signup-page .body > .form > .email > .input-field-email {
     box-sizing: border-box;
 
     display: flex;
@@ -177,7 +181,7 @@
 }
 
 
-.body > .form > .pass, .body > .form > .pass-confirm {
+.signup-page .body > .form > .pass, .body > .form > .pass-confirm {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -193,7 +197,7 @@
 }
 
 .body > .form > .pass-confirm > .input-field-pass-confirm,
-.body > .form > .pass > .input-field-pass {
+.signup-page .body > .form > .pass > .input-field-pass {
     box-sizing: border-box;
 
     display: flex;
@@ -251,7 +255,7 @@ input[type="text"] {
     flex-grow: 0;
 }
 
-.foot {
+.signup-page .foot {
     display: flex;
     flex-direction: row;
     justify-content: center;
