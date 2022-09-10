@@ -24,7 +24,7 @@ export default function DeleteModal(props) {
                 </div>
             </div>
             <div className='foot'>
-                <button className='cancel' onClick={() => alert("halo")}>
+                <button className='cancel'>
                     <div className='text'>Cancel</div>
                 </button>
                 <button className='delete'>

@@ -4,8 +4,395 @@
     height: 311px;
 
     background: #FFFFFF;
-    /* Modal */
 
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+}
+
+.head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 24px;
+    gap: 8px;
+
+    position: absolute;
+    height: auto;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+
+    background: #FFFFFF;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.head > .title {
+    width: 340px;
+    height: 28px;
+
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+
+    display: flex;
+    align-items: center;
+
+    color: #1D1F20;
+
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+
+.head > .close {
+    width: 24px;
+    height: 24px;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 24px;
+    gap: 16px;
+
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 76px;
+    bottom: 80px;
+    /* overflow-y: scroll; */
+}
+
+.body > .form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+
+    width: 372px;
+    height: 154px;
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.body > .form > .name {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+
+    width: 372px;
+    height: 69px;
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.body > .form > .name > .title {
+    width: 71px;
+    height: 25px;
+
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 20px;
+
+    display: flex;
+    align-items: center;
+
+    color: #404040;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.body > .form > .name > .input-fill-info {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+
+    width: 372px;
+    height: 36px;
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.body > .form > .name > .input-fill-info > .input-field-name {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    gap: 10px;
+
+    width: 372px;
+    height: 36px;
+
+    background: #FFFFFF;
+    border: 2px solid #EDEDED;
+    border-radius: 8px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+
+.body > .form > .name > .input-fill-info > .input-field-name > #input-name {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 10px;
+
+    width: 340px;
+    height: 20px;
+
+    border: 0px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+
+::placeholder {
+    width: auto;
+    height: 20px;
+
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+
+    display: flex;
+    align-items: center;
+    color: #404040;
+    opacity: 0.5;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+
+.body > .form > .progress {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+
+    width: 143px;
+    height: 69px;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.body > .form > .progress > .title {
+    width: 71px;
+    height: 25px;
+
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 20px;
+
+    display: flex;
+    align-items: center;
+
+    color: #404040;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.body > .form > .progress > .input-field-progress {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    gap: 10px;
+
+    width: 143px;
+    height: 36px;
+
+    background: #FFFFFF;
+    border: 2px solid #EDEDED;
+    border-radius: 8px;
+
+    flex: none;
+    order: 1;
+    flex-grow: 1;
+}
+
+.body > .form > .progress > .input-field-progress > #input-progress {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 10px;
+
+    width: 111px;
+    height: 20px;
+    border: 0px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+
+*:focus {
+    outline: none;
+}
+
+input[type="text"] {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+
+    display: flex;
+    align-items: center;
+    color: #404040;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.foot {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 24px;
+    gap: 10px;
+
+    position: absolute;
+    height: auto;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+
+    background: #FFFFFF;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.foot > .cancel {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 16px;
+    gap: 4px;
+
+    width: 76px;
+    height: 32px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #E0E0E0;
+
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.foot > .cancel > .text {
+    width: 44px;
+    height: 24px;
+
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #1D1F20;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.foot > .save {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 16px;
+    gap: 4px;
+
+    width: 97px;
+    height: 32px;
+
+    background: #01959F;
+
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.12);
+    border: 0px;
+    border-radius: 8px;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.foot > .save > .text {
+    width: 65px;
+    height: 24px;
+
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
 }
