@@ -26,8 +26,11 @@ export default function LoginPage() {
                         localStorage.setItem("user", JSON.stringify(res.data));
                         navigate('/');
                         break;
+                    case 401:
+                        alert('Please input valid data.')
+                        break;
                     case 500:
-                        alert('Terjadi kesalahan.')
+                        alert('Something went wrong.')
                         break;
                     default:
                         break
@@ -36,7 +39,6 @@ export default function LoginPage() {
         } catch (error) {
             console.log(error.message)
         }
-
     }
 
     return (
@@ -58,7 +60,7 @@ export default function LoginPage() {
                         <div className='pass'>
                             <div className='title'>Password</div>
                             <div className='input-field-pass'>
-                                <input id='input-login-pass' placeholder='Type your password' type ="text" onChange={(e) => setPass(e.target.value)}></input>
+                                <input id='input-login-pass' placeholder='Type your password' type ="password" onChange={(e) => setPass(e.target.value)}></input>
                             </div>
                         </div>
                     </div>
@@ -70,7 +72,7 @@ export default function LoginPage() {
                     <div className='create-acc'>
                         <div className='text'>
                             Don’t have an account yet?
-                            <button className='go-to-signup'>
+                            <button className='go-to-signup' onClick={() => navigate('/signup')}>
                                 <div className='text'>Sign Up</div>
                             </button>
                         </div>
