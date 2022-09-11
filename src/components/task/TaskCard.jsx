@@ -42,9 +42,14 @@ export default function TaskCard(props) {
                 <div className='text' style={{ color: main }}>{props.task.title}</div>
             </div>
             <div className='desc'>{props.task.description}</div>
-            {taskItem.map((task, i) => (
-                <TaskItem key={i} taskItem={task}></TaskItem>
-            ))}
+            {taskItem.length !== 0 ? 
+                taskItem.map((task, i) => (
+                    <TaskItem key={i} taskItem={task} taskItemFound={true}></TaskItem>
+                ))
+                :
+                <TaskItem taskItemFound={false}></TaskItem>
+            }
+            
             <div className='new-task'>
                 <div className='icon'>
                     <TbCirclePlus size={20}></TbCirclePlus>

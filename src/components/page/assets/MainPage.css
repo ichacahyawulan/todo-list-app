@@ -4,7 +4,7 @@
 
 .header {
     position: absolute;
-    width: 1400px;
+    width: 100%;
     height: 64px;
     left: 0px;
     top: 0px;
@@ -20,7 +20,6 @@
     position: absolute;
     height: 56px;
     left: 20px;
-    right: 24px;
     top: 8px;
 }
 
@@ -29,7 +28,7 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 0px;
-    width: 1332px;
+    width: 100%;
     height: 56px;
     flex: none;
     order: 0;
@@ -43,7 +42,7 @@
     align-items: flex-start;
     padding: 10px 0px 0px;
     gap: 10px;
-    width: 1332px;
+    width: 100%;
     height: 56px;
     flex: none;
     order: 0;

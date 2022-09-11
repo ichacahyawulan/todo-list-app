@@ -4,7 +4,7 @@ import { COLOR } from '../../constant/colors';
 
 import './assets/TaskContainer.css'
 
-import TodoServices from '../../services/TodoServices';
+import TodoService from '../../services/TodoService';
 
 export default function TaskContainer() {
     const [taskList, setTaskList] = useState([]);
@@ -16,7 +16,7 @@ export default function TaskContainer() {
 
     function getTodo(){
         try {    
-            TodoServices.getListTodo().then((res) => {
+            TodoService.getListTodo().then((res) => {
                 switch (res.status) {
                     case 200:
                         setTaskList(res.data)
