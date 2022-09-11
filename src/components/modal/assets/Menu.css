@@ -79,6 +79,11 @@
     flex-grow: 1;
 }
 
-.menu-item:hover .icon, .menu-item:hover .text {
+.menu-item:hover, .menu-item:hover .icon, .menu-item:hover .text {
     color:#01959F;
+    cursor: pointer;
+}
+
+.delete:hover .icon, .delete:hover .text {
+    color:#E11428;
 }
