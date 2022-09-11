@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux'
 import { show } from './../../redux/deleteModalSlice'
 import { showEdit } from './../../redux/editModalSlice'
 import { setCurrTaskItem } from '../../redux/currTaskItem';
+import { setCurrTodo } from '../../redux/currTodo';
 import { TbArrowLeft, TbArrowRight } from 'react-icons/tb'
 import { BiEditAlt, BiTrash } from 'react-icons/bi'
 
@@ -11,14 +12,16 @@ import './assets/Menu.css'
 export default function Menu(props) {
     const dispatch = useDispatch()
 
-    function deleteTask(id) {
+    function deleteTask(taskID, todoId) {
         dispatch(show())
-        dispatch(setCurrTaskItem(id))
+        dispatch(setCurrTaskItem(taskID))
+        dispatch(setCurrTodo(todoId))
     }
 
-    function editTask(id) {
+    function editTask(taskID, todoId) {
         dispatch(showEdit())
-        dispatch(setCurrTaskItem(id))
+        dispatch(setCurrTaskItem(taskID))
+        dispatch(setCurrTodo(todoId))
     }
 
     return (
@@ -40,7 +43,7 @@ export default function Menu(props) {
                         Move Left
                     </div>
                 </div>
-                <div className='menu-item edit' onClick={() => editTask(props.taskID)}>
+                <div className='menu-item edit' onClick={() => editTask(props.taskID, props.todoId)}>
                     <div className='icon'>
                         <BiEditAlt size={24}></BiEditAlt>
                     </div>
@@ -48,7 +51,7 @@ export default function Menu(props) {
                         Edit
                     </div>
                 </div>
-                <div className='menu-item delete' onClick={() => deleteTask(props.taskID)}>
+                <div className='menu-item delete' onClick={() => deleteTask(props.taskID, props.todoId)}>
                     <div className='icon'>
                         <BiTrash size={24}></BiTrash>
                     </div>

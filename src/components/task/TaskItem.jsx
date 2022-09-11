@@ -13,6 +13,7 @@ export default function TaskItem(props) {
     const deleteModal = useSelector((state) => state.delete.value)
     const editModal = useSelector((state) => state.edit.value)
     const currTaskItem = useSelector((state) => state.currTaskItem.value)
+    const currTodo = useSelector((state) => state.currTodo.value)
 
     function settingFunction(id) {
         document.getElementById('task-' + id).classList.toggle("show");
@@ -66,7 +67,7 @@ export default function TaskItem(props) {
                                 <i><TbDots size={24}></TbDots></i>
                             </button>
                             <div id={'task-' + props.taskItem.id} className='setting-menu'>
-                                <Menu taskID={props.taskItem.id} />
+                                <Menu taskID={props.taskItem.id} todoId={props.todoId} />
                             </div>
                         </div>
                     </div>
@@ -76,8 +77,8 @@ export default function TaskItem(props) {
                     No Task
                 </div>
             }
-            {deleteModal ? <DeleteModal taskItemID={currTaskItem} todoId={props.todoId}/> : null }
-            {editModal ? <EditTaskModal taskItemID={currTaskItem} todoId={props.todoId}/> : null }
+            {deleteModal ? <DeleteModal taskItemID={currTaskItem} todoId={currTodo}/> : null }
+            {editModal ? <EditTaskModal taskItemID={currTaskItem} todoId={currTodo}/> : null }
         </div>
     );
 }
