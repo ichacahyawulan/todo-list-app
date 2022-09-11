@@ -24,7 +24,10 @@ export default function TaskCard(props) {
             ItemService.getTodoItem(props.task.id).then((res) => {
                 switch (res.status) {
                     case 200:
-                        setTaskItem(res.data)
+                        let data = res.data.sort(function(a,b){
+                            return new Date(b.updated_at) - new Date(a.updated_at)
+                        })
+                        setTaskItem(data)
                         break;
                     case 500:
                         alert('Terjadi kesalahan.')
