@@ -29,7 +29,7 @@ export default function SignUpPage() {
                         console.log(res.data)
                         localStorage.removeItem("user");
                         localStorage.setItem("user", JSON.stringify(res.data));
-                        navigate('/');
+                        navigate('/v1');
                         break;
                     case 401:
                         alert('Please input valid data.')
@@ -89,7 +89,7 @@ export default function SignUpPage() {
                     <div className='back-login'>
                         <div className='text'>
                             Have an account?
-                            <button className='go-to-login' onClick={() => navigate('/login')}>
+                            <button className='go-to-login' onClick={() => navigate('/v1/login')}>
                                 <div className='text'>Login</div>
                             </button>
                         </div>

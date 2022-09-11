@@ -24,7 +24,7 @@ export default function LoginPage() {
                     case 200:
                         localStorage.removeItem("user");
                         localStorage.setItem("user", JSON.stringify(res.data));
-                        navigate('/');
+                        navigate('/v1');
                         break;
                     case 401:
                         alert('Please input valid data.')
@@ -72,7 +72,7 @@ export default function LoginPage() {
                     <div className='create-acc'>
                         <div className='text'>
                             Don’t have an account yet?
-                            <button className='go-to-signup' onClick={() => navigate('/signup')}>
+                            <button className='go-to-signup' onClick={() => navigate('/v1/signup')}>
                                 <div className='text'>Sign Up</div>
                             </button>
                         </div>
