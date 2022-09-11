@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import PrivateRoute from './PrivateRoute';
 
 import LoginPage from '../components/page/LoginPage';
@@ -11,10 +11,11 @@ import MainPage from '../components/page/MainPage';
 const AppRoute = () => (
     <Routes>
         <Route exact path='/' element={<PrivateRoute/>}>
-            <Route exact path='/' element={<MainPage/>}/>
+            <Route path='/' element={<Navigate to='/v1' />} />
         </Route>
-        <Route exact path='/signup' element={<SignUpPage/>}/>
-        <Route exact path='/login' element={<LoginPage/>}/>
+        <Route exact path='/v1' element={<MainPage/>}/>
+        <Route exact path='/v1/signup' element={<SignUpPage/>}/>
+        <Route exact path='/v1/login' element={<LoginPage/>}/>
     </Routes>
 );
 

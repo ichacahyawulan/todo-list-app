@@ -15,6 +15,7 @@ export default function TaskContainer() {
 
     useEffect(() => {
         getTodo()
+        // eslint-disable-next-line
     }, []);
 
     function getTodo(){
