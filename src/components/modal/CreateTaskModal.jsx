@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { IoClose } from 'react-icons/io5'
 
 import './assets/CreateEditTaskModal.css'
+import './assets/CreateTaskModal.css'
 
 import ItemService from './../../services/ItemService'
 
@@ -29,7 +30,7 @@ export default function CreateTaskModal({ setIsOpen, todoId }) {
     }
 
     return (
-        <div className='form-modal centered'>
+        <div className='create-modal centered'>
             <div className='head'>
                 <div className='title'>
                     Create Task

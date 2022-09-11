@@ -1,16 +1,20 @@
 import React from 'react';
 import { IoClose } from 'react-icons/io5'
+import { useDispatch } from 'react-redux'
+import { hideEdit } from './../../redux/editModalSlice'
 
-import './assets/CreateEditTaskModal.css'
+import './assets/EditTaskModal.css'
 
 export default function EditTaskModal(props) {
+    const dispatch = useDispatch()
+
     return (
-        <div className='form-modal'>
+        <div className='edit-modal centered'>
             <div className='head'>
                 <div className='title'>
                     Edit Task
                 </div>
-                <div className='close'>
+                <div className='close' onClick={() => dispatch(hideEdit())}>
                     <IoClose size={24}></IoClose>
                 </div>
             </div>
@@ -31,7 +35,7 @@ export default function EditTaskModal(props) {
                 </div>
             </div>
             <div className='foot'>
-                <button className='cancel'>
+                <button className='cancel' onClick={() => dispatch(hideEdit())}>
                     <div className='text'>Cancel</div>
                 </button>
                 <button className='save'>

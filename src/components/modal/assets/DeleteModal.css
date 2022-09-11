@@ -23,7 +23,7 @@
     transform: translate(-50%, -50%);
 }
 
-.head {
+.delete-modal > .head {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -74,7 +74,7 @@
     flex-grow: 0;
 }
 
-.body {
+.delete-modal > .body {
     width: auto;
     height: 48px;
 
@@ -92,7 +92,7 @@
     flex-grow: 0;
 }
 
-.foot {
+.delete-modal > .foot {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -155,7 +155,7 @@
     flex-grow: 0;
 }
 
-.foot > .delete {
+.delete-modal > .foot > .delete {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -177,7 +177,7 @@
     flex-grow: 0;
 }
 
-.foot > .delete > .text {
+.delete-modal > .foot > .delete > .text {
     width: 44px;
     height: 24px;
 

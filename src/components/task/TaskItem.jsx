@@ -7,9 +7,11 @@ import './assets/TaskItem.css'
 
 import Menu from '../modal/Menu';
 import DeleteModal from '../modal/DeleteModal';
+import EditTaskModal from '../modal/EditTaskModal';
 
 export default function TaskItem(props) {
     const deleteModal = useSelector((state) => state.delete.value)
+    const editModal = useSelector((state) => state.edit.value)
     const currTaskItem = useSelector((state) => state.currTaskItem.value)
 
     function settingFunction(id) {
@@ -75,6 +77,7 @@ export default function TaskItem(props) {
                 </div>
             }
             {deleteModal ? <DeleteModal taskItemID={currTaskItem} todoId={props.todoId}/> : null }
+            {editModal ? <EditTaskModal taskItemID={currTaskItem} todoId={props.todoId}/> : null }
         </div>
     );
 }

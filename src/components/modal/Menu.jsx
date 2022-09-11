@@ -1,6 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux'
 import { show } from './../../redux/deleteModalSlice'
+import { showEdit } from './../../redux/editModalSlice'
 import { setCurrTaskItem } from '../../redux/currTaskItem';
 import { TbArrowLeft, TbArrowRight } from 'react-icons/tb'
 import { BiEditAlt, BiTrash } from 'react-icons/bi'
@@ -12,6 +13,11 @@ export default function Menu(props) {
 
     function deleteTask(id) {
         dispatch(show())
+        dispatch(setCurrTaskItem(id))
+    }
+
+    function editTask(id) {
+        dispatch(showEdit())
         dispatch(setCurrTaskItem(id))
     }
 
@@ -34,7 +40,7 @@ export default function Menu(props) {
                         Move Left
                     </div>
                 </div>
-                <div className='menu-item edit'>
+                <div className='menu-item edit' onClick={() => editTask(props.taskID)}>
                     <div className='icon'>
                         <BiEditAlt size={24}></BiEditAlt>
                     </div>

@@ -1,0 +1,31 @@
+.create-modal {
+    position: relative;
+    width: 420px;
+    height: 311px;
+
+    background: #FFFFFF;
+
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.create-modal > .foot > .save > .text {
+    width: 73px;
+    height: 24px;
+
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
