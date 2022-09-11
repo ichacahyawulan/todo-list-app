@@ -13,6 +13,9 @@ const AppRoute = () => (
         <Route exact path='/' element={<PrivateRoute/>}>
             <Route path='/' element={<Navigate to='/v1' />} />
         </Route>
+        <Route exact path='/v1' element={<PrivateRoute/>}>
+            <Route exact path='/v1' element={<MainPage/>}/>
+        </Route>
         <Route exact path='/v1' element={<MainPage/>}/>
         <Route exact path='/v1/signup' element={<SignUpPage/>}/>
         <Route exact path='/v1/login' element={<LoginPage/>}/>
