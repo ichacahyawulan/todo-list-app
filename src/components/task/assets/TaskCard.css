@@ -20,7 +20,7 @@
     flex-direction: row;
     align-items: flex-start;
     padding: 2px 8px;
-    width: 88px;
+    width: auto;
     height: 24px;
     border: 1px solid;
     border-radius: 4px;
@@ -30,7 +30,7 @@
 }
 
 .label > .text {
-    width: 72px;
+    width: auto;
     height: 20px;
     font-style: normal;
     font-weight: 400;
@@ -64,6 +64,7 @@
     flex: none;
     order: 3;
     flex-grow: 0;
+    cursor: pointer;
 }
 
 .new-task > .icon {

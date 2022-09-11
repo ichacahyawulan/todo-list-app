@@ -14,6 +14,7 @@ export default function TaskCard(props) {
 
     useEffect(() => {
         getItem()
+        // eslint-disable-next-line
     }, []);
 
     function getItem(){
