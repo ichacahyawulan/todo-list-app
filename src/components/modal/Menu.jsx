@@ -1,10 +1,20 @@
 import React from 'react';
+import { useDispatch } from 'react-redux'
+import { show } from './../../redux/deleteModalSlice'
+import { setCurrTaskItem } from '../../redux/currTaskItem';
 import { TbArrowLeft, TbArrowRight } from 'react-icons/tb'
 import { BiEditAlt, BiTrash } from 'react-icons/bi'
 
 import './assets/Menu.css'
 
 export default function Menu(props) {
+    const dispatch = useDispatch()
+
+    function deleteTask(id) {
+        dispatch(show())
+        dispatch(setCurrTaskItem(id))
+    }
+
     return (
         <div className='menu-modal'>
             <div className='menu-container'>
@@ -32,7 +42,7 @@ export default function Menu(props) {
                         Edit
                     </div>
                 </div>
-                <div className='menu-item delete'>
+                <div className='menu-item delete' onClick={() => deleteTask(props.taskID)}>
                     <div className='icon'>
                         <BiTrash size={24}></BiTrash>
                     </div>

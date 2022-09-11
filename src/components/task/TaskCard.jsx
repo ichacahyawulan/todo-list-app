@@ -46,7 +46,7 @@ export default function TaskCard(props) {
             <div className='desc'>{props.task.description}</div>
             {taskItem.length !== 0 ? 
                 taskItem.map((task, i) => (
-                    <TaskItem key={i} taskItem={task} taskItemFound={true}></TaskItem>
+                    <TaskItem key={i} taskItem={task} taskItemFound={true} todoId={props.task.id}></TaskItem>
                 ))
                 :
                 <TaskItem taskItemFound={false}></TaskItem>

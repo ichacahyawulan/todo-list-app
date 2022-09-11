@@ -1,15 +1,19 @@
 import React from 'react';
 import { TbDots } from 'react-icons/tb';
 import { BsCheckCircleFill } from "react-icons/bs";
+import { useSelector } from 'react-redux'
 
 import './assets/TaskItem.css'
 
 import Menu from '../modal/Menu';
+import DeleteModal from '../modal/DeleteModal';
 
 export default function TaskItem(props) {
+    const deleteModal = useSelector((state) => state.delete.value)
+    const currTaskItem = useSelector((state) => state.currTaskItem.value)
+
     function settingFunction(id) {
-        console.log(id)
-        document.getElementById(id).classList.toggle("show");
+        document.getElementById('task-' + id).classList.toggle("show");
     }
 
     window.onclick = function(event) {
@@ -56,11 +60,11 @@ export default function TaskItem(props) {
                             
                         </div>
                         <div className='setting'>
-                            <button className='setting-button' onClick={() => settingFunction('task-' + props.taskItem.id)}>
+                            <button className='setting-button' onClick={() => settingFunction(props.taskItem.id)}>
                                 <i><TbDots size={24}></TbDots></i>
                             </button>
                             <div id={'task-' + props.taskItem.id} className='setting-menu'>
-                                <Menu />
+                                <Menu taskID={props.taskItem.id} />
                             </div>
                         </div>
                     </div>
@@ -70,6 +74,7 @@ export default function TaskItem(props) {
                     No Task
                 </div>
             }
+            {deleteModal ? <DeleteModal taskItemID={currTaskItem} todoId={props.todoId}/> : null }
         </div>
     );
 }
