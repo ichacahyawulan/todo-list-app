@@ -1,16 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { IoClose } from 'react-icons/io5'
 
 import './assets/CreateEditTaskModal.css'
 
-export default function CreateTaskModal(props) {
+import ItemService from './../../services/ItemService'
+
+export default function CreateTaskModal({ setIsOpen, todoId }) {
+    const [taskName, setTaskName] = useState("");
+    const [taskProgress, setTaskProgress] = useState("");
+
+    function saveTask(e){
+        e.preventDefault();
+
+        try {
+            const task = {
+                name: taskName,
+                progress_percentage: taskProgress
+            }
+    
+            ItemService.createTodoItem(todoId, task)
+                .then(() => {
+                    window.location.reload();            
+                })
+                .catch(() => {});
+        } catch (error) {
+            console.log(error.message)
+        }
+    }
+
     return (
-        <div className='form-modal'>
+        <div className='form-modal centered'>
             <div className='head'>
                 <div className='title'>
                     Create Task
                 </div>
-                <div className='close'>
+                <div className='close' onClick={() => setIsOpen(false)}>
                     <IoClose size={24}></IoClose>
                 </div>
             </div>
@@ -19,22 +43,22 @@ export default function CreateTaskModal(props) {
                     <div className='name'>
                         <div className='title'>Task Name</div>
                         <div className='input-field-name'>
-                            <input id='input-name' placeholder='Type your Task' type ="text"></input>
+                            <input id='input-name' placeholder='Type your Task' type ="text" onChange={(e) => setTaskName(e.target.value)}></input>
                         </div>
                     </div>
                     <div className='progress'>
                         <div className='title'>Progress</div>
                         <div className='input-field-progress'>
-                            <input id='input-progress' placeholder='70%' type ="text"></input>
+                            <input id='input-progress' placeholder='70%' type ="text" onChange={(e) => setTaskProgress(e.target.value)}></input>
                         </div>
                     </div>
                 </div>
             </div>
             <div className='foot'>
-                <button className='cancel'>
+                <button className='cancel' onClick={() => setIsOpen(false)}>
                     <div className='text'>Cancel</div>
                 </button>
-                <button className='save'>
+                <button className='save' onClick={(e) => saveTask(e)}>
                     <div className='text'>Save Task</div>
                 </button>
             </div>

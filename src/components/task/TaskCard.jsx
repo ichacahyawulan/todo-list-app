@@ -5,9 +5,11 @@ import TaskItem from './TaskItem';
 import './assets/TaskCard.css'
 
 import ItemService from '../../services/ItemService';
+import CreateTaskModal from '../modal/CreateTaskModal';
 
 export default function TaskCard(props) {
     const [taskItem, setTaskItem] = useState([]);
+    const [isNewTaskOpen, setIsNewTaskOpen] = useState(false);
     const main = props.color.main
     const border = props.color.border
     const surface = props.color.surface
@@ -50,12 +52,13 @@ export default function TaskCard(props) {
                 <TaskItem taskItemFound={false}></TaskItem>
             }
             
-            <div className='new-task'>
+            <div className='new-task' onClick={() => setIsNewTaskOpen(true)}>
                 <div className='icon'>
                     <TbCirclePlus size={20}></TbCirclePlus>
                 </div>
                 <div className='text'>New Task</div>
             </div>
+            {isNewTaskOpen && <CreateTaskModal setIsOpen={setIsNewTaskOpen} todoId={props.task.id} />}
         </div>
     );
 }
