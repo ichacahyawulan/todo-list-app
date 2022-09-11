@@ -4,7 +4,27 @@ import { BsCheckCircleFill } from "react-icons/bs";
 
 import './assets/TaskItem.css'
 
+import Menu from '../modal/Menu';
+
 export default function TaskItem(props) {
+    function settingFunction(id) {
+        console.log(id)
+        document.getElementById(id).classList.toggle("show");
+    }
+
+    window.onclick = function(event) {
+        if (!event.target.matches('.setting-button')) {
+            var dropdowns = document.getElementsByClassName("setting-menu");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+
     return (
         <div className='task-item'>
             {props.taskItemFound ? 
@@ -36,7 +56,12 @@ export default function TaskItem(props) {
                             
                         </div>
                         <div className='setting'>
-                            <TbDots size={24}></TbDots>
+                            <button className='setting-button' onClick={() => settingFunction('task-' + props.taskItem.id)}>
+                                <i><TbDots size={24}></TbDots></i>
+                            </button>
+                            <div id={'task-' + props.taskItem.id} className='setting-menu'>
+                                <Menu />
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -146,24 +146,39 @@
 }
 
 .progress > .setting {
+    position: relative;
+    display: inline-block;
     width: 24px;
     height: 24px;
-    color: #757575;
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-    
 }
 
-.progress > .setting :hover{
-    position: absolute;
+.progress > .setting > button {
     width: 24px;
     height: 24px;
+    padding: 0px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
     cursor: pointer;
+    color: #757575;
+}
 
-    background: #EDEDED;
+button > i {
+    pointer-events: none;
+} 
+
+.progress > .setting > button:hover {
+    background-color: #EDEDED;
+    background-repeat: no-repeat;
     border-radius: 4px;
 }
 
+.setting-menu {
+    display: none;
+    position: absolute;
+    z-index: 10;
+}
+
+.show {display: block;}
 
 

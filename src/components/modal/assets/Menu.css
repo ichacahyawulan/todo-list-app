@@ -79,6 +79,6 @@
     flex-grow: 1;
 }
 
-.menu-container :hover{
+.menu-item:hover .icon, .menu-item:hover .text {
     color:#01959F;
 }
