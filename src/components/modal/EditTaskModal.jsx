@@ -3,12 +3,12 @@ import { IoClose } from 'react-icons/io5'
 
 import './assets/CreateEditTaskModal.css'
 
-export default function CreateTaskModal(props) {
+export default function EditTaskModal(props) {
     return (
         <div className='form-modal'>
             <div className='head'>
                 <div className='title'>
-                    Create Task
+                    Edit Task
                 </div>
                 <div className='close'>
                     <IoClose size={24}></IoClose>
