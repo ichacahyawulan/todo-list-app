@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import TaskCard from './TaskCard';
 import { COLOR } from '../../constant/colors';
+import { useDispatch } from 'react-redux';
+import { setTodoList } from './../../redux/todoList'
 
 import './assets/TaskContainer.css'
 
@@ -9,6 +11,7 @@ import TodoService from '../../services/TodoService';
 export default function TaskContainer() {
     const [taskList, setTaskList] = useState([]);
     const colors = [COLOR.primary, COLOR.secondary, COLOR.danger, COLOR.succes]
+    const dispatch = useDispatch()
 
     useEffect(() => {
         getTodo()
@@ -20,6 +23,7 @@ export default function TaskContainer() {
                 switch (res.status) {
                     case 200:
                         setTaskList(res.data)
+                        dispatch(setTodoList(res.data))
                         break;
                     case 500:
                         alert('Terjadi kesalahan.')

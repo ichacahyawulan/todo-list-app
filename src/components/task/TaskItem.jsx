@@ -67,7 +67,7 @@ export default function TaskItem(props) {
                                 <i><TbDots size={24}></TbDots></i>
                             </button>
                             <div id={'task-' + props.taskItem.id} className='setting-menu'>
-                                <Menu taskID={props.taskItem.id} todoId={props.todoId} />
+                                <Menu taskItemID={props.taskItem.id} todoId={props.todoId} />
                             </div>
                         </div>
                     </div>
